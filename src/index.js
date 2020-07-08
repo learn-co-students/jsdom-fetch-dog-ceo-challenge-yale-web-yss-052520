@@ -33,5 +33,12 @@ window.addEventListener('load', function () {
             breedUL.appendChild(breed)
         }
     })
+    .then(function() {
+        let list_lis = document.querySelectorAll("li")
+        for (let i = 0; i < list_lis.length; i++) {
+            list_lis[i].addEventListener('click', function() {
+                list_lis[i].style.color = "red"
+            })
+        }
+    })
 })
-
