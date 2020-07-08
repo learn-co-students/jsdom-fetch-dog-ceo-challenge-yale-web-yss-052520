@@ -41,4 +41,19 @@ window.addEventListener('load', function () {
             })
         }
     })
+    .then(function(){
+        let dropdown = document.querySelector("select")
+        dropdown.onchange = function(){
+            selected_char = dropdown.value
+            let list_lis = document.querySelectorAll("li")
+            for (let i = 0; i < list_lis.length; i++) {
+                if (list_lis[i].innerText[0] != selected_char) {
+                    list_lis[i].style.display = "none"
+                } else {
+                    list_lis[i].style.display = "list-item"
+                }
+            }
+        }
+    })
 })
+
